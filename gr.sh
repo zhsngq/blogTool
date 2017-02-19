@@ -1,18 +1,19 @@
 #！ /bin/bash
-echo 'tool add' &&
+echo 'tool add ..' &&
 git add . &&
-echo 'tool commit' &&
+echo 'tool commit ..' &&
 git commit -m "edit" &&
-echo 'tool push' &&
+echo 'tool push ..' &&
 git push &&
-echo 'hexo' &&
+echo 'hexo g ..' &&
 hexo g &&
 echo 'cd public' &&
 cd public &&
-echo 'add' &&
+echo 'add ..' &&
 git add . &&
-echo 'commit' &&
+echo 'commit ..' &&
 git commit -m "edit" &&
-echo 'push' &&
+echo 'push ..' &&
 git push &&
 echo "OK"
+cd ../

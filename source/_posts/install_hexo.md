@@ -22,5 +22,6 @@ $ npm install
 $ npm s
 # 生成结果 cd public
 $ npm g
+test
 #发布脚本
 ```
