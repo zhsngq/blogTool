@@ -1,6 +1,5 @@
 #！ /bin/bash
 echo 'tool pull ..' &&
-git pull &&
 if git diff
 then
     echo 'tool add ..' &&
