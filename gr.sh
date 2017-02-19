@@ -1,4 +1,6 @@
 #！ /bin/bash
+echo 'tool pull ..' &&
+git pull
 echo 'tool add ..' &&
 git add . &&
 echo 'tool commit ..' &&
