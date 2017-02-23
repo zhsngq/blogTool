@@ -1,5 +1,5 @@
 ---
-title: Hexo
+title: 静态博客生成工具 Hexo
 date: 2017-02-18
 categories:
     - 工具
@@ -7,7 +7,6 @@ categories:
 tag:
     - 工具
 ---
-静态博客生成工具
 <!--more-->
 
 >Hexo 安装

@@ -1,5 +1,5 @@
 ---
-title: nginx
+title: window 下配制nginx服务器
 date: 2017-02-18
 categories:
     - 服务器
@@ -9,7 +9,6 @@ tag:
     - nginx
     - windows
 ---
-window 下配制nginx服务器
 <!--more-->
 
 >nginx 配置文件
