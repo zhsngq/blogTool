@@ -154,8 +154,8 @@
                                     var regS = new RegExp(keyword, "gi");
                                     data_title = data_title.replace(regS, "<span class=\"search-keyword <%= theme.color.link %> lighten-2\">" + keyword + "</span>");
                                 });
-
-                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var data_url_change = data_url.replace('/blog','');
+                                str += "<li><a href='" + data_url_change + "' class='search-result-title'>" + data_title + "</a>";
                                 var content = data.content.trim().replace(/<[^>]+>/g, "");
                                 if (first_occur >= 0) {
                                     // cut out 100 characters
