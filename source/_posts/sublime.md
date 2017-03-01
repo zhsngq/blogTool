@@ -20,7 +20,7 @@ tag:
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"font_face": "Source Code Pro",
+	"font_face": "Source Code Pro Light",
 	"font_size": 10,
 	"gutter": true,
 	"highlight_line": true,
