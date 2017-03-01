@@ -68,3 +68,10 @@ tag:
 ]
 ```
 
+>sublime php bulid
+
+```json
+{
+    "cmd": ["php", "$file"], "file_regex": "php$", "selector": "source.php"
+}
+```
