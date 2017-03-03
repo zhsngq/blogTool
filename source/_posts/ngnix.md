@@ -71,3 +71,4 @@ set PHP_FCGI_CHILDREN=5
 set PHP_FCGI_MAX_REQUESTS=100000
 start D:/TOOL/php/php-cgi.exe -b 127.0.0.1:9000 -c D:/TOOL/php/php.ini
 ```
+使用 RunHiddenConsole 可以隐藏运行 但是需要[下载](http://download.csdn.net/download/johnnycode/8045177) RunHiddenConsole.exe
