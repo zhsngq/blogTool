@@ -76,3 +76,11 @@ tag:
     "cmd": ["php", "$file"], "file_regex": "php$", "selector": "source.php"
 }
 ```
+
+>docBlockr
+
+```json
+{
+    "jsdocs_extra_tags" : ["@zhsngq {{datetime}}"]
+}
+```
