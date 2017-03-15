@@ -13,18 +13,26 @@ tag:
 > 解压资源包
 
 file.tar.gz
+```bash
 $ tar jxvf file.tar.bz2
+```
 
 file.tar.bz2
+```bash
 $ tar zxvf file.tar.gz
+```
 
 > 查看安装配置
 
+```bash
 $ ./configure --help
+```
 
 > 设置安装路径
 
+```bash
 $ ./configure --prefix=路径
+```
 
 > make
 
