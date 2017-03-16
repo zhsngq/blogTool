@@ -1,0 +1,22 @@
+---
+title: 基本css布局
+date: 2017-03-16
+categories:
+    - 前段
+    - css
+tag:
+    - css
+---
+<!--more-->
+
+>ul li 横向布局
+
+```css
+    li{list-style: none;display: inline-block;*display: inline;zoom: 1;}
+    li *{
+        display: inline-block
+    }
+    [name="imgbox"] ul li * {
+        display: inline-block;
+    }
+```
