@@ -22,9 +22,10 @@ tag:
 	"fade_fold_buttons": false,
 	"font_face": "Source Code Pro Light",
 	"font_size": 10,
-	"font_options": ["gdi"],
 	"gutter": true,
 	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"caret_style": "phase",
 	"ignored_packages":
 	[
 	],
