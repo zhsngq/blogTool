@@ -20,4 +20,6 @@ tag:
 	sc query
 	#删除服务
 	sc delete <SERVICE_NAME>
+    #禁止服务
+    sc config <name> start = disabled
 ```
