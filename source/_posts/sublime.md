@@ -69,6 +69,12 @@ tag:
     { "keys": ["alt+/"], "command": "goto_python_definition", "press_command": "drag_select"},
     { "keys": ["alt+shift+f"], "command": "reindent" },
     { "keys": ["ctrl+w"], "command": "close_file" },
+    { "keys": ["f5"], "command": "build","args": { "panel": "output.exec" } },
+    {
+      "keys": ["f6"],
+      "command": "show_panel",
+      "args": { "panel": "output.exec" }
+    }
 ]
 ```
 
