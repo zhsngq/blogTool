@@ -93,7 +93,8 @@ start D:/TOOL/php/php-cgi.exe -b 127.0.0.1:9000 -c D:/TOOL/php/php.ini
 ```
 
 ```bash
-    @echo off
-    php D:\TOOL\nginx\load_nginx_config.php
-    pause
+    #!/bin/usr/shell
+    echo load_nginx_config
+    php D:/TOOL/nginx/load_nginx_config.php
+    sleep 60000
 ```
