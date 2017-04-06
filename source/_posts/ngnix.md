@@ -1,6 +1,6 @@
 ---
 title: window 下配制nginx服务器
-date: 2017-02-18
+date: 2017-04-06
 categories:
     - 服务器
     - nginx
@@ -72,3 +72,28 @@ set PHP_FCGI_MAX_REQUESTS=100000
 start D:/TOOL/php/php-cgi.exe -b 127.0.0.1:9000 -c D:/TOOL/php/php.ini
 ```
 使用 RunHiddenConsole 可以隐藏运行 但是需要[下载](http://download.csdn.net/download/johnnycode/8045177) RunHiddenConsole.exe
+
+> php 读取配置文件
+
+```php
+<?php
+    $subject = file_get_contents('D:/TOOL/nginx/conf/nginx.conf');
+    preg_match_all('/(listen|server_name|root)\s+\S+(?=;)/', $subject, $result, PREG_PATTERN_ORDER);
+    $result = $result[0];
+    foreach ($result as $key => &$value) {
+        $value = preg_replace('/(listen|server_name|root)\s+/', '', $value);
+        if (($key+1)%3==0) {
+            if (preg_match('/[a-z]|[A-Z]/', $result[$key-1])) {
+                echo $result[$key-1].' - - - - - - - - > '.$result[$key]."\n";
+            } else {
+                echo $result[$key-1].":".$result[$key-2].' - - - - - - - - > '.$result[$key]."\n";
+            }
+        }
+    }
+```
+
+```bash
+    @echo off
+    php D:\TOOL\nginx\load_nginx_config.php
+    pause
+```
