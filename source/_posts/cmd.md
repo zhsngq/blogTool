@@ -1,6 +1,6 @@
 ---
 title: cmd 常用命令
-date: 2017-03-22
+date: 2017-04-6
 categories:
     - windows
     - cmd
@@ -22,4 +22,13 @@ tag:
 	sc delete <SERVICE_NAME>
     #禁止服务
     sc config <name> start = disabled
+```
+
+> cmder
+
+[cmder Dwonload](https://github.com/cmderdev/cmder/releases)
+
+```bash
+    # 添加右击菜单
+    Cmder.exe /REGISTER ALL
 ```
