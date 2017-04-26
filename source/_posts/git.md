@@ -1,5 +1,5 @@
 ---
-title: sublime Code 配置和快捷键
+title: git 使用篇
 date: 2017-04-26
 categories:
     - 工具
