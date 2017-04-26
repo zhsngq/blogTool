@@ -9,6 +9,17 @@ tag:
     - nginx
     - windows
 ---
+php 配置高效debug log
+```json
+{
+    "require": {
+        "raveren/kint": "^1.0",
+        "filp/whoops": "^2.1",
+        "maximebf/debugbar": "^1.13",
+        "tracy/tracy": "^2.4"
+    }
+}
+```
 <!--more-->
 
 >composer.json

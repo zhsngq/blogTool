@@ -7,6 +7,8 @@ categories:
 tag:
     - cmd
 ---
+列出windows进程 结束windows进程 列出window服务
+ren d:\name\rename.txt name.txt
 <!--more-->
 
 > 管理进程

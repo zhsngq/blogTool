@@ -8,6 +8,9 @@ tag:
     - 服务器
     - linux
 ---
+解压资源包    $ tar jxvf file.tar.bz2 $ tar zxvf file.tar.gz
+查看安装配置  $ ./configure --help
+设置安装路径  $ ./configure --prefix=路径
 <!--more-->
 
 > 解压资源包

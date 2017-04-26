@@ -9,9 +9,10 @@ tag:
     - nginx
     - windows
 ---
+启动nginx config
 <!--more-->
 
->nginx 配置文件
+>nginx 配置文件 php 读取配置文件
 
 ```bash
 #user  nobody;
