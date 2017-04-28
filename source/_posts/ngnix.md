@@ -12,6 +12,18 @@ tag:
 启动nginx config
 <!--more-->
 
+> php + nginx 环境
+
+```
+搜索“extension_dir”，找到： e;xtension_dir = "ext" 先去前面的分号再改为 extension_dir = "./ext"
+搜索“date.timezone”，找到：;date.timezone = 先去前面的分号再改为 date.timezone = Asia/Shanghai
+搜索“enable_dl”，找到：enable_dl = Off 改为 enable_dl = On
+搜索“cgi.force_redirect” ;cgi.force_redirect = 1 先去前面的分号再改为 cgi.force_redirect = 0
+搜索“fastcgi.impersonate”，找到： ;fastcgi.impersonate = 1 去掉前面的分号
+搜索“cgi.rfc2616_headers”，找到：;cgi.rfc2616_headers = 0 先去前面的分号再改为 cgi.rfc2616_headers = 1
+搜索“php_mysql”，找到：”extension=php_mysql.dll和extension=php_mysqli.dll  去掉前面的“;”extension=php_mysql.dll和extension=php_mysqli.dll   （支持MYSQL数据库）
+```
+
 >nginx 配置文件 php 读取配置文件
 
 ```bash
