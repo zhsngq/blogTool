@@ -15,13 +15,13 @@ tag:
 > php + nginx 环境
 
 ```
-搜索“extension_dir”，找到： e;xtension_dir = "ext" 先去前面的分号再改为 extension_dir = "./ext"
-搜索“date.timezone”，找到：;date.timezone = 先去前面的分号再改为 date.timezone = Asia/Shanghai
-搜索“enable_dl”，找到：enable_dl = Off 改为 enable_dl = On
-搜索“cgi.force_redirect” ;cgi.force_redirect = 1 先去前面的分号再改为 cgi.force_redirect = 0
-搜索“fastcgi.impersonate”，找到： ;fastcgi.impersonate = 1 去掉前面的分号
-搜索“cgi.rfc2616_headers”，找到：;cgi.rfc2616_headers = 0 先去前面的分号再改为 cgi.rfc2616_headers = 1
-搜索“php_mysql”，找到：”extension=php_mysql.dll和extension=php_mysqli.dll  去掉前面的“;”extension=php_mysql.dll和extension=php_mysqli.dll   （支持MYSQL数据库）
+    搜索“extension_dir”，找到： e;xtension_dir = "ext" 先去前面的分号再改为 extension_dir = "./ext"
+    搜索“date.timezone”，找到：;date.timezone = 先去前面的分号再改为 date.timezone = Asia/Shanghai
+    搜索“enable_dl”，找到：enable_dl = Off 改为 enable_dl = On
+    搜索“cgi.force_redirect” ;cgi.force_redirect = 1 先去前面的分号再改为 cgi.force_redirect = 0
+    搜索“fastcgi.impersonate”，找到： ;fastcgi.impersonate = 1 去掉前面的分号
+    搜索“cgi.rfc2616_headers”，找到：;cgi.rfc2616_headers = 0 先去前面的分号再改为 cgi.rfc2616_headers = 1
+    搜索“php_mysql”，找到：”extension=php_mysql.dll和extension=php_mysqli.dll  去掉前面的“;”extension=php_mysql.dll和extension=php_mysqli.dll   （支持MYSQL数据库）
 ```
 
 >nginx 配置文件 php 读取配置文件
@@ -54,6 +54,7 @@ http {
     client_header_buffer_size    128k;
     large_client_header_buffers  4 128k;
 
+    # yii
     server {
         listen 80;
         server_name localhost;
@@ -72,17 +73,44 @@ http {
         }
     }
 
+    # think-php php7中mysqli 不支持 , 尽量使用php5.6
+    server {
+        listen 80;
+        server_name web.testbase.cn;
+
+        root D:/workspace/bak;
+        index index.html index.htm index.php;
+
+        location / {
+            index  index.html index.htm index.php; #//默认页
+        }
+
+        location ~ .*\.php.* {
+            fastcgi_pass    127.0.0.1:9000;
+            fastcgi_index   index.php;
+            include fastcgi.conf;
+            set $real_script_name   $fastcgi_script_name;
+            fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param   SCRIPT_NAME     $real_script_name;
+            fastcgi_param   PATH_INFO       $path_info;
+            if ($fastcgi_script_name ~ "^(.+?\.php)(/.+)$") {
+                set $real_script_name   $1;
+                set $path_info  $2;
+            }
+        }
+    }
+
 }
 ```
 > 启动nginx
 
 ```bash
-start nginx
-nginx -s reload
-nginx -s stop
-set PHP_FCGI_CHILDREN=5
-set PHP_FCGI_MAX_REQUESTS=100000
-start D:/TOOL/php/php-cgi.exe -b 127.0.0.1:9000 -c D:/TOOL/php/php.ini
+    start nginx
+    nginx -s reload
+    nginx -s stop
+    set PHP_FCGI_CHILDREN=5
+    set PHP_FCGI_MAX_REQUESTS=100000
+    start D:/TOOL/php/php-cgi.exe -b 127.0.0.1:9000 -c D:/TOOL/php/php.ini
 ```
 使用 RunHiddenConsole 可以隐藏运行 但是需要[下载](http://download.csdn.net/download/johnnycode/8045177) RunHiddenConsole.exe
 
