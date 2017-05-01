@@ -23,7 +23,7 @@ sublime 配置文件 sublime keys
     "enable_tab_scrolling": false,
     "ensure_newline_at_eof_on_save": true,
     "fade_fold_buttons": false,
-    "font_face": "Fira Code Retina",
+    "font_face": "Source Code Pro Medium",
     "font_options":
     [
         "directwrite"
@@ -65,7 +65,7 @@ sublime 配置文件 sublime keys
     "show_encoding": true,
     "show_full_path": false,
     "show_panel_on_build": false,
-    "tab_size": 4,
+    "tab_size": 2,
     "theme": "Material-Theme-Palenight.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_automatic_white_space": true,
@@ -75,6 +75,7 @@ sublime 配置文件 sublime keys
     "vintage_start_in_command_mode": true,
     "word_wrap": "false"
 }
+
 
 ```
 
@@ -94,12 +95,4 @@ sublime 配置文件 sublime keys
       "args": { "panel": "output.exec" }
     }
 ]
-```
-
->docBlockr
-
-```json
-{
-    "jsdocs_extra_tags" : ["@zhsngq {{datetime}}"]
-}
 ```
