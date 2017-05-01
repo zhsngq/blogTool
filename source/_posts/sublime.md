@@ -83,16 +83,21 @@ sublime 配置文件 sublime keys
 
  ```json
 [
-    { "keys": ["ctrl+i"], "command": "next_view_in_stack" },
-    { "keys": ["ctrl+o"], "command": "prev_view_in_stack" },
-    { "keys": ["alt+/"], "command": "goto_python_definition", "press_command": "drag_select"},
-    { "keys": ["alt+shift+f"], "command": "reindent" },
-    { "keys": ["ctrl+w"], "command": "close_file" },
-    { "keys": ["f5"], "command": "build","args": { "panel": "output.exec" } },
-    {
-      "keys": ["f6"],
-      "command": "show_panel",
-      "args": { "panel": "output.exec" }
-    }
+  { "keys": ["ctrl+i"], "command": "next_view_in_stack" },
+  { "keys": ["ctrl+o"], "command": "prev_view_in_stack" },
+  { "keys": ["alt+/"], "command": "goto_python_definition", "press_command": "drag_select"},
+  { "keys": ["alt+shift+f"], "command": "reindent" },
+  { "keys": ["ctrl+w"], "command": "close_file" },
+  { "keys": ["f5"], "command": "build","args": { "panel": "output.exec","select": true } },
+  {
+    "keys": ["f6"],
+    "command": "show_panel",
+    "args": { "panel": "output.exec" }
+  },
+  { "keys": ["f1"], "command": "goto_documentation" },
+  {"keys": ["ctrl+alt+f"], "command": "reindent" , "args":
+    {"single_line": false}
+  }
 ]
+
 ```
