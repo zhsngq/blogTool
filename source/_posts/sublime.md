@@ -10,9 +10,9 @@ tag:
 sublime 配置文件 sublime keys
 <!--more-->
 
-## sublime 配置文件
+# sublime 配置文件
 
-### user setting
+## user setting
 
 ```json
 {
@@ -81,7 +81,7 @@ sublime 配置文件 sublime keys
 
 ```
 
-### sublime keys
+## sublime keys
 
  ```json
 [

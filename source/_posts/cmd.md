@@ -11,7 +11,7 @@ tag:
 ren d:\name\rename.txt name.txt
 <!--more-->
 
-## 管理进程
+# 管理进程
 
 ```bash
 	#列出windows进程
@@ -28,6 +28,7 @@ ren d:\name\rename.txt name.txt
 
 # cmder
 
+## 设置
 [cmder Dwonload](https://github.com/cmderdev/cmder/releases)
 
 ```bash
