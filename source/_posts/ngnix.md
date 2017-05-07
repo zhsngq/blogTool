@@ -12,7 +12,7 @@ tag:
 启动nginx config
 <!--more-->
 
-> php + nginx 环境
+### php + nginx 环境
 
 ```
     搜索“extension_dir”，找到： e;xtension_dir = "ext" 先去前面的分号再改为 extension_dir = "./ext"
@@ -24,7 +24,7 @@ tag:
     搜索“php_mysql”，找到：”extension=php_mysql.dll和extension=php_mysqli.dll  去掉前面的“;”extension=php_mysql.dll和extension=php_mysqli.dll   （支持MYSQL数据库）
 ```
 
->nginx 配置文件 php 读取配置文件
+### nginx 配置文件 php 读取配置文件
 
 ```bash
 #user  nobody;
@@ -102,7 +102,7 @@ http {
 
 }
 ```
-> 启动nginx
+### 启动nginx
 
 ```bash
     start nginx
@@ -114,7 +114,7 @@ http {
 ```
 使用 RunHiddenConsole 可以隐藏运行 但是需要[下载](http://download.csdn.net/download/johnnycode/8045177) RunHiddenConsole.exe
 
-> php 读取配置文件
+### php 读取配置文件
 
 ```php
 <?php

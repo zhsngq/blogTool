@@ -13,6 +13,7 @@ sublime 配置文件 sublime keys
 ## sublime 配置文件
 
 ### user setting
+
 ```json
 {
     "auto_find_in_selection": true,
