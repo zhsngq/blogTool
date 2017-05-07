@@ -10,8 +10,9 @@ tag:
 sublime 配置文件 sublime keys
 <!--more-->
 
->sublime 配置文件
+## sublime 配置文件
 
+### user setting
 ```json
 {
     "auto_find_in_selection": true,
@@ -79,7 +80,7 @@ sublime 配置文件 sublime keys
 
 ```
 
->sublime keys
+### sublime keys
 
  ```json
 [
