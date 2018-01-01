@@ -13,7 +13,7 @@ git 冲突 使用 stash | pop
 > git stash
 
 ```bash
-    # 添加到缓冲区a
+    # 添加到缓冲区
     git add .
     git stash
     git pull
