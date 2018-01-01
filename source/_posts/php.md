@@ -83,4 +83,24 @@ function cUrl($url,$header=null, $data = null){
 }
 ```
 
+## throw exp 类型异常
+```bash
+set_exception_handler('zyfexception');
+function zyfexception($exception)
+{
+    message( $exception->getMessage() );
+}
+```
+
+## 系统级别异常
+```bash
+register_shutdown_function('zyfshutdownfunc');
+function zyfshutdownfunc()
+{
+    if ($error = error_get_last()) {
+        $errorStr = $error['type'] . ' <br/>Msg: ' . $error['message'] . ' <br/> ' . $error['file'] . ' </br> ' . $error['line'] ;
+        message($errorStr);
+    }
+}
+```
 
